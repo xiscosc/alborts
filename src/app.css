@@ -14,3 +14,11 @@ html {
 	scroll-behavior: smooth;
 	font-family: "Montserrat", sans-serif;
 }
+
+summary {
+	list-style: none;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
