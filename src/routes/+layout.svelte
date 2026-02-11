@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+  import { afterNavigate } from "$app/navigation";
   import favicon from "$lib/assets/favicon.svg";
   import Nav from "$lib/components/Nav.svelte";
   import "../app.css";
@@ -8,7 +9,16 @@
 
   onMount(() => {
     history.scrollRestoration = "manual";
-    window.scrollTo(0, 0);
+  });
+
+  afterNavigate(({ to }) => {
+    const hash = to?.url.hash.slice(1);
+    if (hash) {
+      document.getElementById(hash)?.scrollIntoView({ behavior: "instant" });
+      history.replaceState(null, "", to!.url.pathname);
+    } else {
+      window.scrollTo(0, 0);
+    }
   });
 </script>
 
