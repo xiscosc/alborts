@@ -1,6 +1,6 @@
 <section
   id="transport"
-  class="min-h-screen flex items-center justify-center px-6 scroll-mt-16"
+  class="min-h-dvh flex items-center justify-center px-6 scroll-mt-16"
 >
   <div class="max-w-2xl text-center">
     <h2 class="text-3xl md:text-4xl font-light font-nova">Transport</h2>
