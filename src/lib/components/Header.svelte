@@ -1,6 +1,6 @@
 <section
   id="home"
-  class="min-h-screen flex flex-col items-center justify-center px-6"
+  class="min-h-dvh flex flex-col items-center justify-center px-6"
 >
   <enhanced:img
     src="$lib/assets/logo.png"
