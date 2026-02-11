@@ -1,5 +1,8 @@
 <script lang="ts">
-  function closeMenu() {
+  function scrollTo(e: MouseEvent) {
+    e.preventDefault();
+    const id = (e.currentTarget as HTMLAnchorElement).hash.slice(1);
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     document.querySelector("nav details")?.removeAttribute("open");
   }
 </script>
@@ -15,6 +18,7 @@
     <li>
       <a
         href="/#home"
+        onclick={scrollTo}
         class="block px-3 py-1.5 text-xs md:text-sm font-medium text-gray-700
                rounded-full transition-colors hover:bg-gray-100 hover:text-gray-900"
       >
@@ -35,14 +39,14 @@
         >
           <a
             href="/#event"
-            onclick={closeMenu}
+            onclick={scrollTo}
             class="block px-5 py-2 text-xs md:text-sm text-gray-700 hover:bg-gray-100 transition-colors"
           >
             Esdeveniment
           </a>
           <a
             href="/#dresscode"
-            onclick={closeMenu}
+            onclick={scrollTo}
             class="block px-5 py-2 text-xs md:text-sm text-gray-700 hover:bg-gray-100 transition-colors"
           >
             Codi de vestimenta
@@ -53,6 +57,7 @@
     <li>
       <a
         href="/#venue"
+        onclick={scrollTo}
         class="block px-3 py-1.5 text-xs md:text-sm font-medium text-gray-700
                rounded-full transition-colors hover:bg-gray-100 hover:text-gray-900"
       >
@@ -62,6 +67,7 @@
     <li>
       <a
         href="/#transport"
+        onclick={scrollTo}
         class="block px-3 py-1.5 text-xs md:text-sm font-medium text-gray-700
                rounded-full transition-colors hover:bg-gray-100 hover:text-gray-900"
       >
@@ -71,6 +77,7 @@
     <li>
       <a
         href="/#rsvp"
+        onclick={scrollTo}
         class="block px-3 py-1.5 text-xs md:text-sm font-medium text-gray-700
                rounded-full transition-colors hover:bg-gray-100 hover:text-gray-900"
       >
