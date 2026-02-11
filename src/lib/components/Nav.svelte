@@ -1,3 +1,9 @@
+<script lang="ts">
+  function closeMenu() {
+    document.querySelector("nav details")?.removeAttribute("open");
+  }
+</script>
+
 <nav
   class="fixed top-0 left-0 right-0 z-50 md:fixed md:top-6 md:left-1/2 md:-translate-x-1/2 md:right-auto
 		   bg-white/80 backdrop-blur-md shadow-sm
@@ -29,12 +35,14 @@
         >
           <a
             href="/#event"
+            onclick={closeMenu}
             class="block px-5 py-2 text-xs md:text-sm text-gray-700 hover:bg-gray-100 transition-colors"
           >
             Esdeveniment
           </a>
           <a
             href="/#dresscode"
+            onclick={closeMenu}
             class="block px-5 py-2 text-xs md:text-sm text-gray-700 hover:bg-gray-100 transition-colors"
           >
             Codi de vestimenta
