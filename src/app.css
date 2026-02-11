@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@font-face {
+	font-family: "Nova Quinta";
+	src: url("/nova-quinta.otf") format("opentype");
+	font-display: swap;
+}
+
+@theme {
+	--font-nova: "Nova Quinta", serif;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-family: "Montserrat", sans-serif;
+	scroll-snap-type: y proximity;
+}
+
+section {
+	scroll-snap-align: start;
+}
