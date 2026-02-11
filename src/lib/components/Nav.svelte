@@ -1,9 +1,14 @@
 <script lang="ts">
   function scrollTo(e: MouseEvent) {
-    e.preventDefault();
-    const id = (e.currentTarget as HTMLAnchorElement).hash.slice(1);
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    document.querySelector("nav details")?.removeAttribute("open");
+    const anchor = e.currentTarget as HTMLAnchorElement;
+    const id = anchor.hash.slice(1);
+    const target = document.getElementById(id);
+
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth" });
+      document.querySelector("nav details")?.removeAttribute("open");
+    }
   }
 </script>
 
