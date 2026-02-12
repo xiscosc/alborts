@@ -1,6 +1,6 @@
 <section
   id="home"
-  class="min-h-svh flex flex-col items-center justify-center px-6"
+  class="min-h-svh flex flex-col items-center justify-center px-6 overflow-x-hidden"
 >
   <enhanced:img
     src="$lib/assets/inici_web.png"
