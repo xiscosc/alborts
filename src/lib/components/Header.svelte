@@ -8,7 +8,7 @@
     class="w-full max-h-[85vh] md:max-h-[65vh] object-contain"
   />
 
-  <div class="w-full overflow-hidden mt-4">
+  <div class="-mx-6 overflow-hidden mt-4">
     <div class="flex w-max animate-scroll">
       <enhanced:img src="$lib/assets/carousel/FOTOS_CARRUSEL-01.png" alt="Carousel 1" class="h-48 w-auto shrink-0 object-contain px-2" />
       <enhanced:img src="$lib/assets/carousel/FOTOS_CARRUSEL-02.png" alt="Carousel 2" class="h-48 w-auto shrink-0 object-contain px-2" />

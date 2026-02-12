@@ -9,6 +9,7 @@
 
   let { form, data }: { form: ActionData; data: PageData } = $props();
 
+  let submitting = $state(false);
   let turnstileToken = $state("");
   let turnstileContainer = $state<HTMLDivElement>();
 
@@ -70,7 +71,13 @@
       </a>
     </div>
   {:else}
-    <form method="POST" use:enhance class="w-full max-w-95">
+    <form method="POST" use:enhance={() => {
+      submitting = true;
+      return async ({ update }) => {
+        await update();
+        submitting = false;
+      };
+    }} class="w-full max-w-95">
       <h1 class="text-3xl font-light font-nova text-center">Confirmació</h1>
 
       {#if form?.error}
@@ -155,9 +162,10 @@
       <div class="mt-8">
         <button
           type="submit"
-          class="w-full py-3 text-sm tracking-wide text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors"
+          disabled={submitting}
+          class="w-full py-3 text-sm tracking-wide text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors disabled:opacity-50 disabled:pointer-events-none"
         >
-          Enviar
+          {submitting ? "Enviant..." : "Enviar"}
         </button>
       </div>
     </form>
