@@ -4,23 +4,28 @@
   async function scrollTo(e: MouseEvent) {
     const anchor = e.currentTarget as HTMLAnchorElement;
     const id = anchor.hash.slice(1);
-    const target = document.getElementById(id);
 
     e.preventDefault();
     document.querySelector("nav details")?.removeAttribute("open");
 
+    function scrollToElement(el: HTMLElement, behavior: ScrollBehavior) {
+      window.scrollTo({ top: el.offsetTop, behavior });
+    }
+
+    const target = document.getElementById(id);
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+      scrollToElement(target, "smooth");
     } else {
       await goto("/", { noScroll: true });
-      document.getElementById(id)?.scrollIntoView({ behavior: "instant" });
+      const el = document.getElementById(id);
+      if (el) scrollToElement(el, "instant");
     }
   }
 </script>
 
 <nav
   class="fixed top-0 left-0 right-0 z-50 md:fixed md:top-6 md:left-1/2 md:-translate-x-1/2 md:right-auto
-		   bg-white/80 backdrop-blur-md shadow-sm
+		   bg-white md:bg-white/80 backdrop-blur-md shadow-sm
 		   md:rounded-full md:px-2 md:py-1 md:shadow-lg"
 >
   <ul
