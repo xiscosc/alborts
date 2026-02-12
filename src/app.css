@@ -8,10 +8,21 @@
 
 @theme {
 	--font-nova: "Nova Quinta", serif;
+	--animate-scroll: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
+	}
 }
 
 html {
 	font-family: "Montserrat", sans-serif;
+	scroll-padding-top: 4rem;
 }
 
 summary {

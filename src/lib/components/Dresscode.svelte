@@ -1,6 +1,6 @@
 <section
   id="dresscode"
-  class="min-h-dvh flex items-center justify-center px-6 scroll-mt-16"
+  class="min-h-svh flex items-center justify-center px-6 scroll-mt-16"
 >
   <div class="max-w-2xl text-center">
     <h2 class="text-3xl md:text-4xl font-light font-nova">Codi de vestimenta</h2>
@@ -16,5 +16,10 @@
     <p class="mt-4 text-gray-600">
       Moltes gràcies per ajudar-nos a mantenir l'harmonia que hem imaginat.
     </p>
+    <enhanced:img
+      src="$lib/assets/codig_vestimenta.png"
+      alt="Codi de vestimenta"
+      class="mt-8 w-full max-h-[30vh] object-contain rounded"
+    />
   </div>
 </section>

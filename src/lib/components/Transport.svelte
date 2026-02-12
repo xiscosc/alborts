@@ -1,6 +1,6 @@
 <section
   id="transport"
-  class="min-h-dvh flex items-center justify-center px-6 scroll-mt-16"
+  class="min-h-svh flex items-center justify-center px-6 scroll-mt-16"
 >
   <div class="max-w-2xl text-center">
     <h2 class="text-3xl md:text-4xl font-light font-nova">Transport</h2>
@@ -28,7 +28,7 @@
     </div>
     <p class="mt-6 text-sm text-gray-400 italic">* Horaris per confirmar</p>
     <enhanced:img
-      src="$lib/assets/coco_bus.jpg"
+      src="$lib/assets/coco_bus.png"
       alt="Transport"
       class="mt-8 w-2/3 max-h-[30vh] object-contain mx-auto rounded"
     />

@@ -1,13 +1,19 @@
 <script lang="ts">
-  function scrollTo(e: MouseEvent) {
+  import { goto } from "$app/navigation";
+
+  async function scrollTo(e: MouseEvent) {
     const anchor = e.currentTarget as HTMLAnchorElement;
     const id = anchor.hash.slice(1);
     const target = document.getElementById(id);
 
+    e.preventDefault();
+    document.querySelector("nav details")?.removeAttribute("open");
+
     if (target) {
-      e.preventDefault();
       target.scrollIntoView({ behavior: "smooth" });
-      document.querySelector("nav details")?.removeAttribute("open");
+    } else {
+      await goto("/", { noScroll: true });
+      document.getElementById(id)?.scrollIntoView({ behavior: "instant" });
     }
   }
 </script>

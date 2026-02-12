@@ -1,4 +1,4 @@
-<section id="venue" class="min-h-dvh flex items-center justify-center px-6 scroll-mt-16">
+<section id="venue" class="min-h-svh flex items-center justify-center px-6 scroll-mt-16">
   <div class="max-w-2xl text-center">
     <h2 class="text-3xl md:text-4xl font-light font-nova">Finca Vinagrella</h2>
     <p class="mt-6 text-gray-600">

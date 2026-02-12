@@ -11,14 +11,8 @@
     history.scrollRestoration = "manual";
   });
 
-  afterNavigate(({ to }) => {
-    const hash = to?.url.hash.slice(1);
-    if (hash) {
-      document.getElementById(hash)?.scrollIntoView({ behavior: "instant" });
-      history.replaceState(null, "", to!.url.pathname);
-    } else {
-      window.scrollTo(0, 0);
-    }
+  afterNavigate(() => {
+    window.scrollTo(0, 0);
   });
 </script>
 
