@@ -16,12 +16,17 @@
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(-50%);
+		transform: translateX(calc(-100% / 3));
 	}
 }
 
 html {
 	font-family: "Montserrat", sans-serif;
+	scroll-padding-top: 5rem;
+}
+
+section {
+	padding-bottom: 15rem;
 }
 
 summary {

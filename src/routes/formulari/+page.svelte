@@ -56,7 +56,7 @@
   {/if}
 </svelte:head>
 
-<div class="min-h-screen flex items-center justify-center px-8 py-20">
+<div class="min-h-screen flex items-start justify-center px-8 pt-[8vh] pb-20 md:pt-20">
   {#if form?.success}
     <div class="text-center">
       <h1 class="text-3xl font-light font-nova">Gràcies!</h1>
