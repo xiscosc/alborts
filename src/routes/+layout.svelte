@@ -30,6 +30,14 @@
   <link rel="icon" href={android192} type="image/png" sizes="192x192" />
   <link rel="icon" href={android512} type="image/png" sizes="512x512" />
   <title>Marina & Albert - 04 de Juliol de 2026</title>
+
+  <!-- Open Graph / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Marina & Albert - 04 de Juliol de 2026" />
+  <meta property="og:description" content="Ens casam! Acompanya'ns en aquest dia tan especial." />
+  <meta property="og:image" content="/corazon_ogg.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 </svelte:head>
 
 <Nav />
