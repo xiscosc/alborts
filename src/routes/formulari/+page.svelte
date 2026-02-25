@@ -56,7 +56,9 @@
   {/if}
 </svelte:head>
 
-<div class="min-h-screen flex items-start justify-center px-8 pt-[8vh] pb-20 md:pt-20">
+<div
+  class="min-h-screen flex items-start justify-center px-8 pt-[8vh] pb-20 md:pt-27"
+>
   {#if form?.success}
     <div class="text-center">
       <h1 class="text-3xl font-light font-nova">Gràcies!</h1>
@@ -71,13 +73,17 @@
       </a>
     </div>
   {:else}
-    <form method="POST" use:enhance={() => {
-      submitting = true;
-      return async ({ update }) => {
-        await update();
-        submitting = false;
-      };
-    }} class="w-full max-w-95">
+    <form
+      method="POST"
+      use:enhance={() => {
+        submitting = true;
+        return async ({ update }) => {
+          await update();
+          submitting = false;
+        };
+      }}
+      class="w-full max-w-95"
+    >
       <h1 class="text-3xl font-light font-nova text-center">Confirmació</h1>
 
       {#if form?.error}
@@ -117,10 +123,16 @@
           name="alergies"
           rows="2"
           placeholder="Al·lèrgies i/o restriccions (opcional)"
-          class="{fieldClass} resize-none">{form?.values?.alergies ?? ""}</textarea
+          class="{fieldClass} resize-none"
+          >{form?.values?.alergies ?? ""}</textarea
         >
 
-        <select name="apat" required class="{fieldClass} appearance-none" style={selectArrowStyle}>
+        <select
+          name="apat"
+          required
+          class="{fieldClass} appearance-none"
+          style={selectArrowStyle}
+        >
           <option value="" disabled selected={!form?.values?.apat}
             >Plat principal</option
           >
@@ -140,7 +152,12 @@
           </p>
         {/if}
 
-        <select name="bus" required class="{fieldClass} appearance-none" style={selectArrowStyle}>
+        <select
+          name="bus"
+          required
+          class="{fieldClass} appearance-none"
+          style={selectArrowStyle}
+        >
           <option value="" disabled selected={!form?.values?.bus}
             >Necessites el bus?</option
           >
@@ -155,8 +172,15 @@
       </div>
 
       {#if data.turnstileSiteKey}
-        <div bind:this={turnstileContainer} class="mt-6 flex justify-center"></div>
-        <input type="hidden" name="cf-turnstile-response" value={turnstileToken} />
+        <div
+          bind:this={turnstileContainer}
+          class="mt-6 flex justify-center"
+        ></div>
+        <input
+          type="hidden"
+          name="cf-turnstile-response"
+          value={turnstileToken}
+        />
       {/if}
 
       <div class="mt-8">
