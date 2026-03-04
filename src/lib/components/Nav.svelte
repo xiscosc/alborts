@@ -66,6 +66,13 @@ async function scrollTo(e: MouseEvent) {
 					>
 						Codi de vestimenta
 					</a>
+					<a
+						href="/#ticket"
+						onclick={scrollTo}
+						class="block px-5 py-2 text-xs md:text-sm text-gray-700 hover:bg-gray-100 transition-colors"
+					>
+						Ticket
+					</a>
 				</div>
 			</details>
 		</li>

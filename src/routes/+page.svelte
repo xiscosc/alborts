@@ -1,6 +1,30 @@
 <script lang="ts">
   import Header from "$lib/components/Header.svelte";
   import Section from "$lib/components/Section.svelte";
+
+  const IBAN = "ES76 0073 0100 5606 4903 0455";
+  let showCopied = $state(false);
+
+  async function copyIban() {
+    try {
+      await navigator.clipboard.writeText(IBAN);
+    } catch {
+      // Fallback for iOS Safari
+      const textarea = document.createElement("textarea");
+      textarea.value = IBAN;
+      textarea.style.position = "fixed";
+      textarea.style.opacity = "0";
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+    }
+    showCopied = true;
+    setTimeout(() => {
+      showCopied = false;
+    }, 2000);
+  }
 </script>
 
 <Header />
@@ -50,6 +74,25 @@
     />
   </div>
 </Section>
+
+<Section id="ticket" title="Ticket">
+  <div class="max-w-2xl text-center">
+    <button type="button" onclick={copyIban} class="cursor-pointer" class:shake={showCopied} aria-label="Copiar IBAN">
+      <enhanced:img
+        src="$lib/assets/tickets.jpg"
+        alt="Ticket"
+        class="mt-8 w-full max-h-[50vh] object-contain rounded"
+      />
+    </button>
+    <p class="mt-2 text-sm text-gray-400">Toca la imatge per copiar l'IBAN</p>
+  </div>
+</Section>
+
+{#if showCopied}
+  <div class="fixed bottom-6 left-1/2 -translate-x-1/2 bg-gray-800 text-white px-6 py-3 rounded-full shadow-lg z-50 text-sm">
+    IBAN copiat al porta-retalls
+  </div>
+{/if}
 
 <Section id="venue" title="Finca Vinagrella">
   <div class="max-w-2xl text-center">
@@ -139,3 +182,17 @@
     />
   </div>
 </Section>
+
+<style>
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20% { transform: translateX(-4px); }
+    40% { transform: translateX(4px); }
+    60% { transform: translateX(-3px); }
+    80% { transform: translateX(3px); }
+  }
+
+  .shake {
+    animation: shake 0.4s ease-in-out;
+  }
+</style>
