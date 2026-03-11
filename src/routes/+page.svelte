@@ -31,16 +31,15 @@
 
 <Section id="event" title="Esdeveniment">
   <div class="max-w-2xl text-center">
-    <p class="mt-6 text-2xl font-semibold text-gray-700">18:00h</p>
     <p class="mt-6 text-gray-600">
       Ens fa molta il·lusió poder compartir aquest dia amb tots vosaltres. La
       cerimònia marcarà l'inici d'un moment molt especial per a nosaltres,
       envoltats de la gent que estimam.
     </p>
     <p class="mt-4 text-gray-600">
-      Quan arribeu, trobareu un petit refrigeri perquè pugueu refrescar-vos,
-      saludar-vos i començar a gaudir de l'ambient abans que comenci la
-      cerimònia.
+      Vos esperam a partir de les <span class="font-semibold">18:00</span>,
+      moment en què podreu arribar amb tranquil·litat, saludar-vos i començar
+      a gaudir de l'ambient abans que comenci la cerimònia.
     </p>
     <p class="mt-4 text-gray-600">
       Després, només quedarà celebrar, riure, ballar i crear records junts.
