@@ -33,11 +33,11 @@
   <title>Marina & Albert - 04 de Juliol de 2026</title>
 
   <!-- Open Graph / WhatsApp -->
-  <meta property="og:url" content="https://marinaialbert.pages.dev" />
+  <meta property="og:url" content="https://bodamarinaialbert.pages.dev" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Marina & Albert - 04 de Juliol de 2026" />
   <meta property="og:description" content="Ens casam! Acompanya'ns en aquest dia tan especial." />
-  <meta property="og:image" content="https://marinaialbert.pages.dev/corazon_ogg.png" />
+  <meta property="og:image" content="https://bodamarinaialbert.pages.dev/corazon_ogg.png" />
   <meta property="og:image:width" content="842" />
   <meta property="og:image:height" content="1024" />
 </svelte:head>
