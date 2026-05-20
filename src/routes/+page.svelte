@@ -139,16 +139,21 @@
       <div class="text-center">
         <p class="font-semibold">Sóller</p>
         <p class="text-sm">Carrer de Cetre (aturada d'autobús)</p>
+        <p class="text-sm font-semibold">16:30h</p>
       </div>
       <span class="text-gray-300">&#8595;</span>
       <div class="text-center">
         <p class="font-semibold">Son Ferriol, Palma</p>
         <p class="text-sm">Av. del Cid (davant plaça de l'església)</p>
+        <p class="text-sm font-semibold">17:10h</p>
       </div>
       <span class="text-gray-300">&#8595;</span>
       <p class="font-semibold">Finca Vinagrella</p>
     </div>
-    <p class="mt-6 text-sm text-gray-400 italic">* Horaris per confirmar</p>
+    <div class="mt-8 text-gray-600">
+      <p class="font-semibold">Tornada</p>
+      <p class="text-sm">Finca Vinagrella · 4:00h</p>
+    </div>
     <enhanced:img
       src="$lib/assets/coco_bus.png"
       alt="Transport"
