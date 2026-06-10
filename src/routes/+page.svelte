@@ -132,8 +132,8 @@
     <p class="mt-4 text-gray-600">
       <span class="font-semibold">Necessitaràs el bus?</span>
       <br />
-      Per favor, indica'ns si faràs ús del servei d'autobús al formulari de confirmació
-      perquè puguem organitzar-ho tot correctament.
+      Si encara no ens has indicat si faràs ús del servei d'autobús, posa't en contacte
+      amb nosaltres perquè puguem organitzar-ho tot correctament.
     </p>
     <div class="mt-8 flex flex-col items-center gap-1 text-gray-600">
       <div class="text-center">
@@ -165,21 +165,13 @@
 <Section id="rsvp" title="Vens?">
   <div class="max-w-2xl text-center">
     <p class="mt-6 text-gray-600">
-      Per a nosaltres és molt important saber si podreu acompanyar-nos en aquest
-      dia tan especial. A continuació trobareu un petit formulari on podreu
-      confirmar la vostra assistència i facilitar-nos alguns detalls necessaris
-      per a l'organització.
+      El termini per confirmar l'assistència ja ha finalitzat. Moltes gràcies a
+      tots per confirmar!
     </p>
     <p class="mt-4 text-gray-600">
-      Gràcies per ajudar-nos a fer que tot surti perfecte!
+      Si necessites fer algun canvi, posa't en contacte amb nosaltres
+      directament.
     </p>
-    <a
-      href="/formulari"
-      data-sveltekit-reload
-      class="mt-8 inline-block px-8 py-3 text-sm tracking-wide text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors"
-    >
-      FORMULARI
-    </a>
     <enhanced:img
       src="$lib/assets/corazon-02.png"
       alt="Corazón"
